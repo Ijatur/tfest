@@ -12,9 +12,11 @@ class Merchandise extends Model
 
     protected $fillable = [
         'name',
+        'thumbnail', 
         'description',
         'price',
-        'thumbnail', 
+        'is_open',
+        'href',
     ];
 
     protected $casts = [

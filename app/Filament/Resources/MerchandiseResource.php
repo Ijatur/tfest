@@ -27,18 +27,28 @@ class MerchandiseResource extends Resource
                     ->required()
                     ->label('Name')
                     ->maxLength(255),
-                 Forms\Components\FileUpload::make('thumbnail')
+                Forms\Components\TextInput::make('href')
+                    ->required()
+                    ->label('Masukan Link Toko')
+                    ->maxLength(255),
+                Forms\Components\FileUpload::make('thumbnail')
                         ->image()
                         ->required(),
-                Forms\Components\TextInput::make('description')
+                Forms\Components\Textarea::make('description')
                     ->required()
                     ->label('description')
                     ->maxLength(1000),
                 
                 Forms\Components\TextInput::make('price')
-                    ->required()
-                    ->label('Price')
-                    ->maxLength(255),
+                        ->required()
+                        ->numeric()
+                        ->prefix('IDR'),
+                Forms\Components\Select::make('is_open')
+                        ->options([
+                            true => 'Open',
+                            false => 'Not Available',
+                        ])
+                        ->required(),
             ]);
     }
 
@@ -55,14 +65,13 @@ class MerchandiseResource extends Resource
                     ->label('Name')
                     ->searchable()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('href')
+                    ->label('Link')
+                    ->searchable()
+                    ->sortable(),
                 
                 Tables\Columns\TextColumn::make('price')
                     ->label('Price')
-                    ->sortable(),
-                
-                Tables\Columns\TextColumn::make('created_at')
-                    ->label('Created At')
-                    ->dateTime('d-m-Y')
                     ->sortable(),
             ])
             ->filters([

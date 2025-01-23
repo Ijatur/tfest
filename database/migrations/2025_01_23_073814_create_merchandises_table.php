@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('thumbnail');
             $table->string('description');
-            $table->string('price');
+            $table->string('href');
+            $table->unsignedBigInteger('price');
+            $table->boolean('is_open');
             $table->softDeletes();
             $table->timestamps();
         });

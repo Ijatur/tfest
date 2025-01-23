@@ -49,7 +49,7 @@
             <span class="marquee-content">LAGI LAGI PESTARPORA</span>
         </div>
     </section>
-    <section class="w-full h-full bg-pink">
+    <section class="w-full h-full bg-pink py-10">
         <div class="flex justify-center items-center pt-11">
             <img src="https://pestapora.com/_nuxt/section-submit-foto-kamu.BYcgTvbt.png" alt=""
                 class="w-[60%] lg:w-[45%]">
@@ -112,21 +112,87 @@
             <img src="https://pestapora.com/_nuxt/button-lihat-semua-foto.hpEAqso3.png" class="w-[10rem] lg:w-[15rem]">
         </div>
     </section>
-    <section class="w-full h-full bg-pink p-8">
-        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Card 1 -->
-            @foreach ($merchandises as $merchandise)
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="{{ Storage::url($merchandise->thumbnail) }}" alt="Product 1" class="w-full h-60 object-cover">
-                    <div class="p-4">
-                        <h2 class="text-lg font-bold mb-2">{{ $merchandise->name }}</h2>
-                        <p class="text-sm text-gray-700 mb-4">{{ $merchandise->description }}</p>
-                        <p class="text-sm text-gray-700 mb-4">Rp {{ number_format($merchandise->price, 0, ',', '.') }}
-                        </p>
-                        <a href="#" class="block text-center bg-pink text-white py-2 px-4 rounded">Buy</a>
+    <section class="w-full overflow-hidden bg-yellow-400 z-40 bg-red">
+        <div class="marquee whitespace-nowrap flex justify-around text-lg font-semibold py-2">
+            <span class="marquee-content text-yellow">LAGI LAGI PESTARPORA</span>
+            <span class="marquee-content text-white">LAGI LAGI PESTARPORA</span>
+            <span class="marquee-content text-yellow">LAGI LAGI PESTARPORA</span>
+            <span class="marquee-content text-white">LAGI LAGI PESTARPORA</span>
+        </div>
+    </section>
+    <section class="w-full h-full bg-blue p-8">
+        <div class="container mx-auto">
+            <!-- Judul Section -->
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Merchandise Kami</h2>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                @forelse ($merchandises as $merchandise)
+                    <div class="card hover:shadow-xl transition rounded-lg bg-white overflow-hidden border">
+                        <!-- Merchandise Thumbnail -->
+                        <div class="relative h-[200px] bg-gray-100">
+                            <img src="{{ Storage::url($merchandise->thumbnail) }}" class="w-full h-full object-cover"
+                                alt="thumbnail">
+
+                            @if ($merchandise->is_open)
+                                <div class="absolute top-3 left-3 bg-green-500 text-white text-xs px-3 py-1 rounded-full">
+                                    OPEN
+                                </div>
+                            @else
+                                <div class="absolute top-3 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                                    CLOSED
+                                </div>
+                            @endif
+                        </div>
+
+                        <!-- Merchandise Details -->
+                        <div class="p-6 flex flex-col gap-4">
+                            <h3 class="font-semibold text-lg text-gray-800 leading-tight line-clamp-2">
+                                {{ $merchandise->name }}
+                            </h3>
+                            <p class="text-gray-600 text-sm line-clamp-3">
+                                {{ $merchandise->description }}
+                            </p>
+                            <p class="font-bold text-lg text-blue-600">
+                                Rp {{ number_format($merchandise->price, 0, '.', ',') }}
+                            </p>
+                            <a href="{{ $merchandise->href }}" redirect>
+                                <div class="p-4 bg-pink rounded-lg text-white flex justify-center">BUY</div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            @endforeach
+                @empty
+                    <p class="col-span-full text-center text-gray-500 text-lg">WOYLAH KITA BELUM LAUNCHING</p>
+                @endforelse
+            </div>
+        </div>
+    </section>
+    <section class="w-full overflow-hidden bg-yellow-400 z-40 bg-yellow">
+        <div class="marquee whitespace-nowrap flex justify-around text-lg font-semibold py-2">
+            <span class="marquee-content text-pink">LAGI LAGI PESTARPORA</span>
+            <span class="marquee-content">LAGI LAGI PESTARPORA</span>
+            <span class="marquee-content text-pink">LAGI LAGI PESTARPORA</span>
+            <span class="marquee-content">LAGI LAGI PESTARPORA</span>
+        </div>
+    </section>
+    <section class="w-full h-full bg-red py-10">
+        <div class="flex justify-center items-center pt-11">
+            <img src="https://pestapora.com/_nuxt/title-keseruan-pestapora-lalu.DpiLkHBD.png" alt=""
+                class="w-[60%] lg:w-[35%]">
+        </div>
+        <div class="w-full h-full mx-auto flex justify-center items-center p-5 sm:p-10 md:p-16">
+            <iframe width="1260" height="615" src="https://www.youtube.com/embed/2i1mrd0NLC8?si=FJecTpwpaKZ8NAdH"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section class="w-full overflow-hidden z-40 bg-pink">
+        <div class="marquee whitespace-nowrap flex justify-around text-lg font-semibold py-2">
+            <span class="marquee-content text-white">LAGI LAGI PESTARPORA</span>
+            <span class="marquee-content">LAGI LAGI PESTARPORA</span>
+            <span class="marquee-content text-white">LAGI LAGI PESTARPORA</span>
+            <span class="marquee-content">LAGI LAGI PESTARPORA</span>
         </div>
     </section>
 @endsection
