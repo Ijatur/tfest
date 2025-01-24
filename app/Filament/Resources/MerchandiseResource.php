@@ -41,7 +41,7 @@ class MerchandiseResource extends Resource
                     ])
                     ->label('Stock')
                     ->required(),
-                forms\Components\TextInput::make('image')
+                forms\Components\FileUpload::make('image')
                     ->label('Image')
                     ->required(),
                 forms\Components\TextInput::make('href')

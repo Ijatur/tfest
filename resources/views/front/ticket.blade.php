@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('content')
-    <x-nav/>
-    <div class="relative top-[110px] w-full h-full">
+    <x-nav2/>
+    <div class="relative w-full h-full">
         {{-- Running text --}}
         <div class="flex relative w-full overflow-hidden">
             <header class="flex justify-start items-center whitespace-nowrap overflow-hidden">
@@ -16,10 +16,13 @@
         {{-- End running text --}}
 
         {{-- Hero section --}}
-        <div class="relative h-[86vh] w-full">
-            <img class="absolute inset-0 w-full h-full object-cover" src="https://assets.bosscreator.xyz/banner/slide-4.webp" alt="" srcset="">
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-                <img class="w-3/4 md:mt-24" src="https://pestapora.com/_nuxt/hero._FwySz7d.png" alt="" srcset="">
+        <div
+        class="hero min-h-screen"
+        style="background-image: url(https://assets.bosscreator.xyz/banner/slide-4.webp);">
+            <div class="">
+                <div class="flex justify-center items-center">
+                    <img class="w-9/12 md:mt-24" src="https://pestapora.com/_nuxt/hero._FwySz7d.png" alt="" srcset="">
+                </div>
             </div>
         </div>
         {{-- End hero section --}}
@@ -44,24 +47,22 @@
                     <img src="https://pestapora.com/_nuxt/tiket-pestapora-2025.CPKrUcjQ.png" alt="" srcset="">
                 </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 items-center justify-center gap-8 md:gap-16 mx-4">
-
-
-                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-12">
+                <div class="grid grid-cols-2 md:grid-cols-3 items-center justify-center gap-8  mx-4">
+                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-2 lg:p-10">
                         <div class="relative">
                             <img class="cursor-not-allowed grayscale" src="https://assets.bosscreator.xyz/ticket/2025/early-bird.png" alt="" srcset="">
                             <img class="absolute h-10 md:h-12 lg:h-20 right-0 bottom-1 grayscale" src="https://pestapora.com/_nuxt/tiket-dah-abis.CTR6wSFU.png" alt="" srcset="">
                         </div>
                     </div>
 
-                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-12">
+                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-2 lg:p-10">
                         <div class="relative">
                             <img class="cursor-not-allowed grayscale" src="https://assets.bosscreator.xyz/ticket/2025/presale.png" alt="" srcset="">
                             <img class="absolute h-10 md:h-12 lg:h-20 right-0 bottom-1 grayscale" src="https://pestapora.com/_nuxt/tiket-dah-abis.CTR6wSFU.png" alt="" srcset="">
                         </div>
                     </div>
 
-                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-12">
+                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-2 lg:p-10">
                         <div class="relative">
                             <img class="cursor-not-allowed grayscale" src="https://assets.bosscreator.xyz/ticket/2025/reguler-pass.png" alt="" srcset="">
                             <img class="absolute h-10 md:h-12 lg:h-20 right-0 bottom-1 grayscale" src="https://pestapora.com/_nuxt/tiket-dah-abis.CTR6wSFU.png" alt="" srcset="">
@@ -212,7 +213,7 @@
         {{-- End running text --}}
         
         {{-- Merch --}}
-        <div>
+        {{-- <div>
             @forelse ($merchandises as $merchandise)
                 <h1>{{ $merchandise->name }}</h1>
                 <a href="{{ $merchandise->href }}">buy</a>
@@ -229,24 +230,7 @@
                 <p>gada data</p>
             @endforelse
         
-        </div>
-
-        {{-- Footer --}}
-        <div class="container mx-auto my-16 px-5 text-center md:text-left">
-            <div class="flex flex-col gap-8 md:flex-row md:justify-between">
-                End
-            </div>
-            <div class="border-0 border-t border-slate-100 mt-5">
-                asda
-            </div>
-            <div class="flex flex-col items-center text-center my-0 gap-4">
-                asdasdas
-            </div>
-            <div class="mb-40">
-                assda
-            </div>
-        </div>
-        {{-- End footer --}}
-
+        </div> --}}
+        <x-footer/>
     </div>
 @endsection
