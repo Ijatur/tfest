@@ -16,6 +16,7 @@ class FrontController extends Controller
 
     public function ticket()
     {
-        return view('front.ticket');
+        $merchandises = Merchandise::all();
+        return view('front.ticket', compact('merchandises'));
     }
 }
