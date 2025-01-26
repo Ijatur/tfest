@@ -24,10 +24,34 @@
 
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <title>Tfest</title>
+    <title>Tfest @yield('title')</title>
 </head>
 <body class="font-sans">
     @yield('content')
     @vite('resources\js\app.js')
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
+
+        // Auto-hide Navbar on scroll
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.transform = "translateY(0)";
+            } else {
+                navbar.style.transform = "translateY(-100%)";
+            }
+            prevScrollPos = currentScrollPos;
+        };
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
 </body>
 </html>

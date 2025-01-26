@@ -1,15 +1,16 @@
 @extends('layout.app')
 @section('content')
+@section('title', '- Ticket')
     <x-nav2/>
-    <div class="relative w-full h-full">
+    <div class="relative w-full h-full pt-[96px] bg-blue">
         {{-- Running text --}}
         <div class="flex relative w-full overflow-hidden">
             <header class="flex justify-start items-center whitespace-nowrap overflow-hidden">
-            <div class="marquee flex shrink-0 h-10">
-                <img class="h-12" src="https://pestapora.com/_nuxt/running-teal.q_knhVDy.png" alt="" srcset="">
-                <img class="h-12" src="https://pestapora.com/_nuxt/running-teal.q_knhVDy.png" alt="" srcset="">
-                <img class="h-12" src="https://pestapora.com/_nuxt/running-teal.q_knhVDy.png" alt="" srcset="">
-                <img class="h-12" src="https://pestapora.com/_nuxt/running-teal.q_knhVDy.png" alt="" srcset="">
+            <div class="marquee flex shrink-0 h-8">
+                <img class="h-10" src="https://pestapora.com/_nuxt/running-teal.q_knhVDy.png" alt="" srcset="">
+                <img class="h-10" src="https://pestapora.com/_nuxt/running-teal.q_knhVDy.png" alt="" srcset="">
+                <img class="h-10" src="https://pestapora.com/_nuxt/running-teal.q_knhVDy.png" alt="" srcset="">
+                <img class="h-10" src="https://pestapora.com/_nuxt/running-teal.q_knhVDy.png" alt="" srcset="">
             </div>
         </header>
         </div>
@@ -21,7 +22,7 @@
         style="background-image: url(https://assets.bosscreator.xyz/banner/slide-4.webp);">
             <div class="">
                 <div class="flex justify-center items-center">
-                    <img class="w-9/12 md:mt-24" src="https://pestapora.com/_nuxt/hero._FwySz7d.png" alt="" srcset="">
+                    <img class="h-3/4 mb-24 w-2/3 lg:w-9/12 md:mt-24" src="https://pestapora.com/_nuxt/hero._FwySz7d.png" alt="" srcset="">
                 </div>
             </div>
         </div>
@@ -29,14 +30,14 @@
 
         {{-- Running text --}}
         <div class="flex relative w-full overflow-hidden">
-            <header class="flex justify-start items-center whitespace-nowrap overflow-hidden">
+            <div class="flex justify-start items-center whitespace-nowrap overflow-hidden">
                 <div class="marquee flex shrink-0 h-10">
                     <img class="h-12" src="https://pestapora.com/_nuxt/running-red.CNeS5Oga.png" alt="" srcset="">
                     <img class="h-12" src="https://pestapora.com/_nuxt/running-red.CNeS5Oga.png" alt="" srcset="">
                     <img class="h-12" src="https://pestapora.com/_nuxt/running-red.CNeS5Oga.png" alt="" srcset="">
                     <img class="h-12" src="https://pestapora.com/_nuxt/running-red.CNeS5Oga.png" alt="" srcset="">
                 </div>
-            </header>
+            </div>
         </div>
         {{-- End running text --}}
 
@@ -44,27 +45,27 @@
         <div class="bg-blue">
             <div class="container mx-auto py-20 md:py-24">
                 <div class="flex justify-center mx-4 mb-10 md:mb-20">
-                    <img src="https://pestapora.com/_nuxt/tiket-pestapora-2025.CPKrUcjQ.png" alt="" srcset="">
+                    <img class="w-3/4 md:h-3/4 sm:h-3/4 lg:h-" src="https://pestapora.com/_nuxt/tiket-pestapora-2025.CPKrUcjQ.png" alt="" srcset="">
                 </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 items-center justify-center gap-8  mx-4">
-                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-2 lg:p-10">
+                <div class="flex flex-wrap items-center justify-center gap-4 md:gap-8 mx-10">
+                    <div class=" hover:-mt-5 transition-all ease-in-out p-2 md:p-2 lg:p-10 relative">
                         <div class="relative">
-                            <img class="cursor-not-allowed grayscale" src="https://assets.bosscreator.xyz/ticket/2025/early-bird.png" alt="" srcset="">
+                            <img class=" h-[20vh] md:h-[25vh] lg:h-[40vh] cursor-not-allowed grayscale" src="https://assets.bosscreator.xyz/ticket/2025/early-bird.png" alt="" srcset="">
                             <img class="absolute h-10 md:h-12 lg:h-20 right-0 bottom-1 grayscale" src="https://pestapora.com/_nuxt/tiket-dah-abis.CTR6wSFU.png" alt="" srcset="">
                         </div>
                     </div>
 
-                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-2 lg:p-10">
+                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-2 lg:p-10 relative">
                         <div class="relative">
-                            <img class="cursor-not-allowed grayscale" src="https://assets.bosscreator.xyz/ticket/2025/presale.png" alt="" srcset="">
+                            <img class="h-[20vh] md:h-[25vh] lg:h-[40vh] cursor-not-allowed grayscale" src="https://assets.bosscreator.xyz/ticket/2025/presale.png" alt="" srcset="">
                             <img class="absolute h-10 md:h-12 lg:h-20 right-0 bottom-1 grayscale" src="https://pestapora.com/_nuxt/tiket-dah-abis.CTR6wSFU.png" alt="" srcset="">
                         </div>
                     </div>
 
-                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-2 lg:p-10">
+                    <div class="hover:-mt-5 transition-all ease-in-out p-2 md:p-2 lg:p-10 relative">
                         <div class="relative">
-                            <img class="cursor-not-allowed grayscale" src="https://assets.bosscreator.xyz/ticket/2025/reguler-pass.png" alt="" srcset="">
+                            <img class="h-[20vh] md:h-[25vh] lg:h-[40vh] cursor-not-allowed grayscale" src="https://assets.bosscreator.xyz/ticket/2025/reguler-pass.png" alt="" srcset="">
                             <img class="absolute h-10 md:h-12 lg:h-20 right-0 bottom-1 grayscale" src="https://pestapora.com/_nuxt/tiket-dah-abis.CTR6wSFU.png" alt="" srcset="">
                         </div>
                     </div>
@@ -217,10 +218,30 @@
                 <div class="flex flex-col md:flex-row justify-center items-center mb-12 mt-8">
                     <img class="w-3/4 md:w-2/4" src="https://pestapora.com/_nuxt/section-submit-foto-kamu.BYcgTvbt.png" alt="" srcset="">
                 </div>
-        
-                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-1 px-6 md:px-12">
+
+                {{-- <div class="p-1 flex flex-wrap items-center justify-center">
                     @forelse ($merchandises as $merchandise)
-                    <a href="{{ $merchandise->href }}" class="aspect-square overflow-hidden shimmer-placeholder block">
+                    <a href="{{ $merchandise->href }}" class="flex-shrink-0 m-6 relative bg-white h-64 overflow-hidden rounded-lg max-w-xs shadow-lg">
+                        <div class="relative pt-10 px-10 flex items-center justify-center">
+                            <img class="relative w-40 " src="{{ Storage::url($merchandise->image) }}" alt="">
+                        </div>
+                        <div class="relative px-6 ">
+                            <span class="block opacity-75 -mb-1">{{ $merchandise->description }}</span>
+                            <div class="flex justify-between gap-3">
+                                <span class="block font-semibold text-xl">{{ $merchandise->name }}</span>
+                                <span class="bg-pink text-white rounded-full text-xs font-bold px-3 py-2 leading-none flex items-center">Rp.{{ number_format($merchandise->price, 0, '.', '.') }}</span>
+                            </div>
+                        </div>
+                    </a>
+                    @empty
+                        <p class="col-span-4 text-center">No merchandise available.</p>
+                    @endforelse
+                </div> --}}
+
+                <div class="p-1 flex flex-wrap items-center justify-center">
+                    @forelse ($merchandises as $merchandise) 
+                    {{-- pake [] as $merchandise buat cek kosong --}}
+                    <a href="{{ $merchandise->href }}" class="flex-shrink-0 m-6 relative bg-white h-64 overflow-hidden rounded-lg max-w-xs shadow-lg">
                         <div class="w-full h-full relative">
                             <img 
                                 class="object-cover w-full h-full  {{ $merchandise->stock ? 'hover:scale-110 ease-in duration-100' : 'grayscale ' }}" 
@@ -245,6 +266,35 @@
                     <p class="col-span-4 text-center">No merchandise available.</p>
                     @endforelse
                 </div>
+        
+                {{-- <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-1 px-6 md:px-12">
+                    @forelse ($merchandises as $merchandise) 
+                    {{-- pake [] as $merchandise buat cek kosong --
+                    <a href="{{ $merchandise->href }}" class="aspect-square overflow-hidden shimmer-placeholder block">
+                        <div class="w-full h-full relative">
+                            <img 
+                                class="object-cover w-full h-full  {{ $merchandise->stock ? 'hover:scale-110 ease-in duration-100' : 'grayscale ' }}" 
+                                src="{{ Storage::url($merchandise->image) }}" 
+                                alt="" 
+                                srcset="">
+                            <div class="absolute bottom-0 left-0 w-full h-1/2 z-20 p-3 md:p-5 text-white flex flex-col justify-end">
+                                <div class="z-20 truncate">
+                                    {{ $merchandise->name }}
+                                </div>
+                                <div class="z-20 font-bold text-sm">
+                                    Rp.{{ number_format($merchandise->price, 0, '.', '.') }}
+                                </div>
+                                <div class="z-20 text-xs mt-1">
+                                    {{ $merchandise->description }}
+                                </div>
+                                <div class="absolute bottom-0 left-0 w-full h-1/2 z-10 bg-gradient-to-t from-black"></div>
+                            </div>
+                        </div>
+                    </a>
+                    @empty
+                    <p class="col-span-4 text-center">No merchandise available.</p>
+                    @endforelse
+                </div> --}}
             </div>
         </div>
         
