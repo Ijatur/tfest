@@ -15,10 +15,16 @@ export default {
             // Warna utama taro sini
             'white' : '#ffffff',
             'black' : '#000000',
-            'yellow' : '#feff00',
+            'Kuning' : '#F5CB1A',
             'red' : '#ee3435',
             'blue' : '#35c7f8',
             'pink' : '#f979b2',
+            'biru' : '#2D74BA',
+            'biru-dua' : '#447BBF',
+            'krem' : '#FCF6D6',
+            'oranye' : '#EA6328',
+
+
 
             // Menambahkan warna bawaan Tailwind, termasuk gray
             gray: colors.gray,
@@ -27,6 +33,7 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 inter: ['Inter', ...defaultTheme.fontFamily.sans],
+                superDream: ['SuperDream', 'sans-serif'],
             },
         },
     },

@@ -1,5 +1,5 @@
 {{-- Navbar --}}
-<!--<div class="navbar sticky top-0 z-50 bg-yellow px-8 md:px-22 lg:px-56 shadow-md">
+<!-- <div class="navbar sticky top-0 z-50 bg-yellow px-10 py-6 shadow-md">
     {{-- Navbar kiri --}}
     <div class="navbar-start w-fit">
         <a href="/"><img  class="h-16 min-w-fit " src="https://pestapora.com/_nuxt/logo-pestapora-2025.MuvH88kW.png" alt="" srcset=""></a>
@@ -29,8 +29,8 @@
             <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
                 <span class="material-symbols-outlined">menu</span>
             </div>
-            <div class="absolute px-[45px] w-full">
-                <ul tabindex="0" class="menu-lg dropdown-content shadow-md bg-yellow rounded-b-md mt-[16px] w-screen font-inter font-bold">
+            <div class="absolute pl-[97px]">
+                <ul tabindex="0" class="menu-lg dropdown-content shadow-md bg-yellow rounded-b-md mt-8 w-screen font-inter font-bold">
                     <li class="hover:bg-pink hover:rotate-1 group-hover:text-white p-4 hover:text-white"><a href="/">Home</a></li>
                     <li class="hover:bg-blue hover:-rotate-1 group-hover:text-white p-4 hover:text-white"><a href="/ticket">Ticket</a></li>
                     <li class="hover:bg-pink group-hover:text-white p-4 hover:text-white"><a href="/lineup">Line up</a></li>
@@ -42,7 +42,7 @@
         </div>
         
     </div>
-  </div>-->
+  </div> -->
   <nav id="navbar" class="fixed w-full bg-yellow shadow-md transition-transform duration-300 transform-gpu z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <!-- Logo -->
