@@ -1,26 +1,35 @@
-<nav class="fixed top-0 items-center justify-between w-full shadow-md px-10 py-6 flex z-50 bg-yellow"
-x-data="{ open: false }" @click.away="open = false">
- <a href="/"><img  class="h-16 min-w-fit " src="https://pestapora.com/_nuxt/logo-pestapora-2025.MuvH88kW.png" alt="" srcset=""></a>
-    <ul class="flex gap-8 w-full justify-end hidden md:flex font-inter font-bold">
-      <li><a href="/" class="hover:text-blue">Home</a></li>
-      <li><a href="/about" class="hover:text-blue">Ticket</a></li>
-      <li><a href="/lineup" class="hover:text-blue">Line up</a></li>
-      <li><a href="/venue" class="hover:text-blue">Venue</a></li>
-      <li><a href="/merch" class="hover:text-blue">Merch</a></li>
-      <li><a href="/about" class="hover:text-blue">About Tfest</a></li>
-    </ul> 
-    <a href="#" class="md:hidden flex justify-end" @click="open = !open">
-      <span class="material-symbols-outlined">menu</span>
-  </a>
+<nav id="navbar" class="fixed w-full bg-biru shadow-md transition-transform duration-300 transform-gpu z-50">
+  <div class="container mx-auto md:px-4 px-12 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="/">
+          <img  class="max-h-16 min-w-0 " src="{{asset('assets/logo/logo_fest.png')}}" alt="" srcset="">
+      </a>
 
-  <div x-show="open" x-transition class="md:hidden absolute top-0 mt-24 right-0 bg-yellow shadow-lg w-full">
-    <ul class="font-inter font-bold">
-        <li class="hover:bg-blue group-hover:text-white p-4 hover:text-white"><a href="/">Home</a></li>
-        <li class="hover:bg-blue group-hover:text-white p-4 hover:text-white"><a href="/about">Ticket</a></li>
-        <li class="hover:bg-blue group-hover:text-white p-4 hover:text-white"><a href="/lineup">Line up</a></li>
-        <li class="hover:bg-blue group-hover:text-white p-4 hover:text-white"><a href="/venue">Venue</a></li>
-        <li class="hover:bg-blue group-hover:text-white p-4 hover:text-white"><a href="/merch">Merch</a></li>
-        <li class="hover:bg-blue group-hover:text-white p-4 hover:text-white"><a href="/about">About Tfest</a></li>
-    </ul>
+      <!-- Navigation Links -->
+      <ul class="hidden md:flex md:space-x-8 space-x-12 text-2xl text-white font-superDream font-bold ">
+          <li><a href="/" class="hover:text-oranye">Home</a></li>
+          <li><a href="/ticket" class="hover:text-oranye">Ticket</a></li>
+          <li><a href="/lineup" class="hover:text-oranye">Line up</a></li>
+          <li><a href="/venue" class="hover:text-oranye">Venue</a></li>
+          <li><a href="/merch" class="hover:text-oranye">Merch</a></li>
+          <li><a href="/about" class="hover:text-oranye">About Tfest</a></li>    
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden flex items-center ">
+          <span class="material-symbols-outlined text-white font-bold">menu</span>
+      </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden bg-biru md:hidden shadow-md">
+      <ul class="text-white font-superDream font-thin">
+          <li><a class="hover:bg-krem hover:rotate-1 p-4 hover:text-biru w-full inline-block" href="/">Home</a></li>
+          <li><a class="hover:bg-krem hover:-rotate-1 p-4 hover:text-biru w-full inline-block"href="/ticket">Ticket</a></li>
+          <li><a class="hover:bg-krem p-4 hover:text-biru w-full inline-block" href="/lineup">Line up</a></li>
+          <li><a class="hover:bg-krem p-4 hover:text-biru w-full inline-block" href="/venue">Venue</a></li>
+          <li><a class="hover:bg-krem p-4 hover:text-biru w-full inline-block" href="/merch">Merch</a></li>
+          <li><a class="hover:bg-krem p-4 hover:text-biru w-full inline-block" href="/about">About</a></li>
+      </ul>
   </div>
 </nav>

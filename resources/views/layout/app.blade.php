@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,0,0&icon_names=menu" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     @vite('resources\css\app.css')
     <style>
         @import url(https://pro.fontawesome.com/releases/v5.10.0/css/all.css);
@@ -29,5 +30,30 @@
 <body class="font-sans">
     @yield('content')
     @vite('resources\js\app.js')
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
+
+        // Auto-hide Navbar on scroll
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.transform = "translateY(0)";
+            } else {
+                navbar.style.transform = "translateY(-100%)";
+            }
+            prevScrollPos = currentScrollPos;
+        };
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
 </body>
 </html>
