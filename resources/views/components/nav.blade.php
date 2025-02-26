@@ -17,7 +17,7 @@
 
         <!-- Mobile Menu Button -->
         <button id="menu-btn" class="md:hidden flex items-center ">
-            <span class="material-symbols-out-menu">menu</span>
+            <span class="material-symbols-outlined">menu</span>
         </button>
     </div>
 
