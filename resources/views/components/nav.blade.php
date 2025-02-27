@@ -7,12 +7,12 @@
 
       <!-- Navigation Links -->
       <ul class="hidden md:flex md:space-x-8 space-x-12 text-2xl text-white font-superDream font-bold ">
-          <li><a href="/" class="hover:text-oranye">Home</a></li>
-          <li><a href="/ticket" class="hover:text-oranye">Ticket</a></li>
-          <li><a href="/lineup" class="hover:text-oranye">Line up</a></li>
-          <li><a href="/venue" class="hover:text-oranye">Venue</a></li>
-          <li><a href="/merch" class="hover:text-oranye">Merch</a></li>
-          <li><a href="/about" class="hover:text-oranye">About Tfest</a></li>    
+          <li><a href="/" class="hover:text-krem">Home</a></li>
+          <li><a href="/ticket" class="hover:text-krem">Ticket</a></li>
+          <li><a href="/lineup" class="hover:text-krem">Line up</a></li>
+          <li><a href="/venue" class="hover:text-krem">Venue</a></li>
+          <li><a href="/merch" class="hover:text-krem">Merch</a></li>
+          <li><a href="/about" class="hover:text-krem">About Tfest</a></li>    
       </ul>
 
       <!-- Mobile Menu Button -->
@@ -24,8 +24,8 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden bg-biru md:hidden shadow-md">
       <ul class="text-white font-superDream font-thin">
-          <li><a class="hover:bg-krem hover:rotate-1 p-4 hover:text-biru w-full inline-block" href="/">Home</a></li>
-          <li><a class="hover:bg-krem hover:-rotate-1 p-4 hover:text-biru w-full inline-block"href="/ticket">Ticket</a></li>
+          <li><a class="hover:bg-krem p-4 hover:text-biru w-full inline-block" href="/">Home</a></li>
+          <li><a class="hover:bg-krem p-4 hover:text-biru w-full inline-block"href="/ticket">Ticket</a></li>
           <li><a class="hover:bg-krem p-4 hover:text-biru w-full inline-block" href="/lineup">Line up</a></li>
           <li><a class="hover:bg-krem p-4 hover:text-biru w-full inline-block" href="/venue">Venue</a></li>
           <li><a class="hover:bg-krem p-4 hover:text-biru w-full inline-block" href="/merch">Merch</a></li>
